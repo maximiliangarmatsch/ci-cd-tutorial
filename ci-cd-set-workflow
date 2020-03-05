@@ -1,0 +1,33 @@
+In the repo create a new folder named .github/workflows/:
+  mkdir -p .github/workflows/
+  
+Create a new file named javascript.yml in .github/workflows/.
+Configure our first workflow like so:
+*********************************************
+name: JavaScript workflow
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: "12.x"
+      - name: npm install, and test
+        run: |
+          npm install
+          npm test
+        env:
+          CI: true
+*********************************************
+
+The workflow has a name, "JavaScript workflow", runs on every push, and as a result it creates a virtual Ubuntu environment with Node.js 12.x 
+This is all it takes to start with automated testing and continuous integration in JavaScript, with a bit of help from Github.
+
+Today continuous integration is made dead simple by a growing number of CI/CD services like Gitlab CI, Bitbucket pipelines, CircleCI, and Github workflow.
+But is continuous integration really worth it? Considering how simple is to set up a build/test pipeline today there should be no more excuses for avoiding CI/CD, even when a project has a short-ish lifespan.
