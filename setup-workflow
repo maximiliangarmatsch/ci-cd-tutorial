@@ -25,3 +25,6 @@ jobs:
         env:
           CI: true ## optional
 *********************************************
+
+Explaination:
+The workflow has a name, "JavaScript workflow", runs on every push, and as a result it creates a virtual Ubuntu environment with Node.js 12.x 
