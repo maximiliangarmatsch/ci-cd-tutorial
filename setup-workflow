@@ -26,5 +26,11 @@ jobs:
           CI: true ## optional
 *********************************************
 
+Then commit and push to your repo.
+
+Then go to https://github.com/[YOUR PROFILE NAME]/[YOUR REPO NAME]/actions
+
+
+
 Explaination:
 The workflow has a name, "JavaScript workflow", runs on every push, and as a result it creates a virtual Ubuntu environment with Node.js 12.x 
