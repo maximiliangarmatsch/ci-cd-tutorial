@@ -21,3 +21,16 @@ Then they will push it into the version control system and it goes back into the
 Once again, if there is any error reported during testing, the feedback goes to the dev team again, where they fix it and the process reiterates if required.
 
 This lifecycle continues until we get code/a product which can be deployed to the production server where we measure and validate the code.
+
+Most CI/CD service are configured through a YAML file which usually takes:
+
+1. the name of the pipeline (Github calls it "workflow")
+2. a list of jobs to do
+3. a list of steps for every job
+
+If we want to translate the configuration to actual things to do we can configure the CI service for:
+
+1. setting up a JavaScript environment (mostly Node.js)
+2. installing the dependencies for the project
+3. optionally building the project
+4. running automated tests
