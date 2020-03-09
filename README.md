@@ -1,5 +1,5 @@
-# ci-cd-tutorial
-A tutorial for setting up CI/CD 
+# Continuous Integration (CI/CD) with Docker + Jenkins
+A tutorial for setting up CI/CD  with Docker + Jenkins
 
 
 ## Why CI/CD ?
